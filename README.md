@@ -1,6 +1,13 @@
 # MonCRUD
-Easily creates RESTfull CRUD resources from Mongoose models using express.
+Easily generates RESTfull resources from Mongoose models using express.
 
+
+
+## Instalation
+
+```shell
+npm install moncrud
+```
 
 ## Usage
 
