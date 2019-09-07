@@ -1,8 +1,8 @@
 {
   "name": "moncrud",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "",
-  "main": "srx/index.js",
+  "main": "src/index.js",
   "scripts": {},
   "author": "Lucas Gonçalves Bento <lucasgoncalvesb@gmail.com>",
   "license": "Beerware",

@@ -34,7 +34,7 @@ function crudify(app = express()) {
 
     app.addCruds = (models) => {
         models.forEach(model => {
-            registerCrud(app, model, model.modelName)
+            registerCrud(app, model, model.modelName.toLowerCase())
         });
     }
 
