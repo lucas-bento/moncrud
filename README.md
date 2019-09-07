@@ -1,6 +1,7 @@
 # MonCRUD
-Easily generates RESTfull resources from Mongoose models using express.
+Easily generates RESTfull APIs using a MongoDB database.
 
+This node module creates resources from Mongoose models and exposes them using an Express server.
 
 
 ## Instalation
@@ -25,19 +26,50 @@ const UserSchema = new mongoose.Schema({
 const User = mongoose.model("User", UserSchema)
 ```
 
-Then tell MonCRUD to automatically generate a RESTfull resource for your Model:
+Decorate your express app with moncrud
 
 ```javascript
 const moncrud = require('moncrud')
-const app = moncrud();
+const express = require('express')
+const baseApp = express()
 
+//
+// Perform additional configurarions on express instance
+//
+
+// Decorate with moncrud
+const app = moncrud(baseApp)
+```
+
+Alternatively, you can just have moncrud set everything up for you
+```javascript
+const moncrud = require('moncrud')
+const app = moncrud() 
+```
+
+Then tell MonCRUD to automatically generate a RESTfull resource for your Model:
+
+```javascript
+// Default route is Model name in lowercase. In this case, '/user'
+app.addCrud(User)
+
+// Or you can customize your routing
+app.addCrud(User, '/admins')
+
+// You can also add a lot of models all at once (default routings will be applyed)
 app.addCruds([
     User,
+    Product,
+    Store,
+    Supplier
 ])
 
+
+// Start up your express server!
 app.listen(3000);
 
 ```
+
 
 You can then got to http://localhost:3000/user to:
 
