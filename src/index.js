@@ -1,8 +1,8 @@
-const Crud = require('./CrudController')
-const express = require('express');
-const bodyParser = require('body-parser'); 
+import Crud from './CrudController';
+import express from 'express';
+import { json, urlencoded } from 'body-parser'; 
 
-module.exports = crudify
+export default crudify
 
 
 registerCrud = (app, model, route) => {
@@ -16,8 +16,8 @@ registerCrud = (app, model, route) => {
 function crudify(app = express()) {
     console.log('crudifying...')
 
-    app.use(bodyParser.json())
-    app.use(bodyParser.urlencoded({extended: false}))
+    app.use(json())
+    app.use(urlencoded({extended: false}))
 
     app.cruds = []
     app.crudPrefix = '/'

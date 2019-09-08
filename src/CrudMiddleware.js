@@ -1,9 +1,14 @@
 module.exports = (req, res, next) => {
-    var query = {}
+    
+    var query = req.query
 
-    if (req.params.id) {
-        query._id = req.params.id
-    }
+    Object.keys(req.params).forEach( paramName => {
+        if(paramName === 'id') {
+            query._id = req.params.id
+        } else {
+            query[paramName] = req.params[paramName]
+        }
+    })
 
     req.query = query
 

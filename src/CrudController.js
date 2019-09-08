@@ -1,12 +1,12 @@
-const express = require('express');
-const CrudMiddleware = require('./CrudMiddleware')
+import { Router } from 'express';
+import CrudMiddleware from './CrudMiddleware';
 
 class CrudController {
 
     constructor(model, preprocessor) {
         this.model = model
         this.preprocessor = preprocessor
-        this.router = express.Router();
+        this.router = Router();
 
 
         const middleware = [CrudMiddleware]
@@ -89,4 +89,4 @@ class CrudController {
 }
 
 
-module.exports = CrudController
+export default CrudController

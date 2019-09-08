@@ -1,0 +1,8 @@
+GET http://localhost:3000/user?email=lucas@blabla
+###
+GET http://localhost:3000/user?email=lucasbentods
+###
+GET http://localhost:3000/user
+###
+GET http://localhost:3000/user/123
+###

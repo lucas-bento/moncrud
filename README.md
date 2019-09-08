@@ -73,7 +73,7 @@ app.listen(3000);
 
 You can then got to http://localhost:3000/user to:
 
-### Create a user
+### Create an user
 ```javascript
 POST http://localhost:3000/user
 
@@ -83,7 +83,7 @@ POST http://localhost:3000/user
 }
 ```
 
-### Read a user
+### Read an user
 ```javascript
 GET http://localhost:3000/user/:id
 ```
@@ -93,7 +93,12 @@ GET http://localhost:3000/user/:id
 GET http://localhost:3000/user
 ```
 
-### Update a user
+### Read from all users with filters
+```javascript
+GET http://localhost:3000/user?name=lukita
+```
+
+### Update an user
 ```javascript
 PUT http://localhost:3000/user/:id
 
@@ -102,12 +107,12 @@ PUT http://localhost:3000/user/:id
 }
 ```
 
-### Delete a user
+### Delete an user
 ```javascript
 DELETE http://localhost:3000/user/:id
 ```
 
-### Overwrite a user
+### Overwrite an user
 ```javascript
 PATCH http://localhost:3000/user/:id
 
