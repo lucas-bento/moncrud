@@ -14,5 +14,14 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lucas-bento/moncrud.git"
-  }
+  },
+  "keywords": [
+    "mongo",
+    "mongoose",
+    "express",
+    "crud",
+    "rest",
+    "api",
+    "scaffold"
+  ]
 }
