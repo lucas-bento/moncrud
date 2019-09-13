@@ -100,7 +100,7 @@ GET http://localhost:3000/user?name=lukita
 
 ### Update an user
 ```javascript
-PUT http://localhost:3000/user/:id
+PATCH http://localhost:3000/user/:id
 
 {
     "email","lukita@new_email.com"
@@ -114,7 +114,7 @@ DELETE http://localhost:3000/user/:id
 
 ### Overwrite an user
 ```javascript
-PATCH http://localhost:3000/user/:id
+PUT http://localhost:3000/user/:id
 
 {
     "name":"lukita v2",
