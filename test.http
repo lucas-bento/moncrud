@@ -1,8 +1,37 @@
-GET http://localhost:3000/user?email=lucas@blabla
+GET http://localhost:3000/user
+
 ###
 GET http://localhost:3000/user?email=lucasbentods
 ###
 GET http://localhost:3000/user
 ###
-GET http://localhost:3000/user/123
+DELETE http://localhost:3000/user/5d3f3441628dc0713c1512bb
 ###
+
+PUT http://localhost:3000/user/5d3f3441628dc0713c1512bb
+
+
+ {
+    "admin": false,
+    "name": "tesuiyuite",
+    "email": "lucas@blabla",
+    "password": "senha",
+    "__v": 0,
+    "createdAt": "2019-07-29T18:01:24.029Z"
+  }
+
+
+###
+
+PATCH  http://localhost:3000/user/5d3f3f8abfa2210a5bc9f604
+
+
+ {
+    "admin": false,
+    "name": "tesuiyuite",
+    "email": "lucas@blabla",
+    "password": "senha",
+    "__v": 0,
+    "createdAt": "2019-07-29T18:01:24.029Z"
+  }
+  ###

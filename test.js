@@ -4,7 +4,7 @@ mongoose.connect("mongodb://localhost/test-artesanatools", { useNewUrlParser: tr
 
 
 
-const moncrud = require('./src').default
+const moncrud = require('./src')
 
 
 const UserSchema = new mongoose.Schema({
